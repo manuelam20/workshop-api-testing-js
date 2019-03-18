@@ -28,5 +28,31 @@ describe('First Api tests', () => {
         });
     });
 
+    it('Consume PATCH service', () =>{
+        const body = {
+            "first": "Michael", 
+            "last": "Angelo"
+        };
+        return request.patch('https://httpbin.org/patch')
+        .send(body)
+        .then((response) => {
+            expect(response.status).to.equal(200);
+            expect(response.body.data).to.equal('{"first":"Michael","last":"Angelo"}');
+        });
+    });
+
+    it('Consume PUT service', () =>{
+        const body = {
+            "first": "Michael", 
+            "last": "Angelo"
+        };
+        return request.put('https://httpbin.org/put')
+        .send(body)
+        .then((response) => {
+            expect(response.status).to.equal(200);
+            expect(response.body.data).to.equal('{"first":"Michael","last":"Angelo"}');
+        });
+    });
+
 
 });
