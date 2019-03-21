@@ -53,6 +53,4 @@ describe('First Api tests', () => {
             expect(response.body.data).to.equal('{"first":"Michael","last":"Angelo"}');
         });
     });
-
-
 });

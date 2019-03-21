@@ -1,8 +1,6 @@
 const agent = require('superagent-promise')(require('superagent'), Promise);
 const statusCode = require('http-status-codes');
-const chai = require('chai');
- 
-const expect = chai.expect;
+const { expect } = require('chai');
 
 describe('First Api Tests', () => {
     it('Consume GET Service', () => {
