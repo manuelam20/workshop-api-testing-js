@@ -1,0 +1,154 @@
+{
+  "stats": {
+    "suites": 3,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2019-04-10T15:41:46.293Z",
+    "end": "2019-04-10T15:41:46.981Z",
+    "duration": 688,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "passPercentClass": "success",
+    "pendingPercentClass": "danger"
+  },
+  "suites": {
+    "uuid": "1727401e-e532-4317-a4ac-6ef956c90e8e",
+    "title": "",
+    "fullFile": "",
+    "file": "",
+    "beforeHooks": [],
+    "afterHooks": [],
+    "tests": [],
+    "suites": [
+      {
+        "uuid": "973e70bf-fc01-490b-8193-ce06c934317f",
+        "title": "Array",
+        "fullFile": "C:\\Users\\Admin\\Documents\\workshop-api-testing-js\\test\\HelloWord.test.js",
+        "file": "\\test\\HelloWord.test.js",
+        "beforeHooks": [],
+        "afterHooks": [],
+        "tests": [],
+        "suites": [
+          {
+            "uuid": "dc72909d-0f0d-43f8-9cb5-72eaba6fb9be",
+            "title": "#indexOf()",
+            "fullFile": "C:\\Users\\Admin\\Documents\\workshop-api-testing-js\\test\\HelloWord.test.js",
+            "file": "\\test\\HelloWord.test.js",
+            "beforeHooks": [],
+            "afterHooks": [],
+            "tests": [
+              {
+                "title": "should return -1 when the value is not present",
+                "fullTitle": "Array #indexOf() should return -1 when the value is not present",
+                "timedOut": false,
+                "duration": 0,
+                "state": "passed",
+                "speed": "fast",
+                "pass": true,
+                "fail": false,
+                "pending": false,
+                "code": "assert.equal(-1, [1,2,3].indexOf(4));",
+                "err": {},
+                "isRoot": false,
+                "uuid": "7d4d1b93-0525-4d0f-915a-b43771ffeda6",
+                "isHook": false,
+                "skipped": false
+              }
+            ],
+            "suites": [],
+            "passes": [
+              "7d4d1b93-0525-4d0f-915a-b43771ffeda6"
+            ],
+            "failures": [],
+            "pending": [],
+            "skipped": [],
+            "duration": 0,
+            "root": false,
+            "rootEmpty": false,
+            "_timeout": 5000
+          }
+        ],
+        "passes": [],
+        "failures": [],
+        "pending": [],
+        "skipped": [],
+        "duration": 0,
+        "root": false,
+        "rootEmpty": false,
+        "_timeout": 5000
+      },
+      {
+        "uuid": "7b609444-4ecb-4ca3-81ff-c373233177de",
+        "title": "First Api Tests",
+        "fullFile": "C:\\Users\\Admin\\Documents\\workshop-api-testing-js\\test\\MyFirstApiConsume.test.js",
+        "file": "\\test\\MyFirstApiConsume.test.js",
+        "beforeHooks": [],
+        "afterHooks": [],
+        "tests": [
+          {
+            "title": "Consume GET Service",
+            "fullTitle": "First Api Tests Consume GET Service",
+            "timedOut": false,
+            "duration": 384,
+            "state": "passed",
+            "speed": "slow",
+            "pass": true,
+            "fail": false,
+            "pending": false,
+            "code": "return agent.get('https://httpbin.org/ip').then((response) => {\n  expect(response.status).to.equal(statusCode.OK);\n  expect(response.body).to.have.property('origin');\n});",
+            "err": {},
+            "isRoot": false,
+            "uuid": "202f8815-74ee-4036-bfe4-1f8752936830",
+            "isHook": false,
+            "skipped": false
+          },
+          {
+            "title": "Consume GET Service with query parameters",
+            "fullTitle": "First Api Tests Consume GET Service with query parameters",
+            "timedOut": false,
+            "duration": 294,
+            "state": "passed",
+            "speed": "slow",
+            "pass": true,
+            "fail": false,
+            "pending": false,
+            "code": "const query = {\n  name: 'John',\n  age: '31',\n  city: 'New York'\n};\n      \nreturn agent.get('https://httpbin.org/get')\n  .query(query)\n  .then((response) => {\n    expect(response.status).to.equal(statusCode.OK);\n    expect(response.body.args).to.eql(query);\n  });",
+            "err": {},
+            "isRoot": false,
+            "uuid": "08688f92-f87e-4733-aba8-d0a162b6d138",
+            "isHook": false,
+            "skipped": false
+          }
+        ],
+        "suites": [],
+        "passes": [
+          "202f8815-74ee-4036-bfe4-1f8752936830",
+          "08688f92-f87e-4733-aba8-d0a162b6d138"
+        ],
+        "failures": [],
+        "pending": [],
+        "skipped": [],
+        "duration": 678,
+        "root": false,
+        "rootEmpty": false,
+        "_timeout": 5000
+      }
+    ],
+    "passes": [],
+    "failures": [],
+    "pending": [],
+    "skipped": [],
+    "duration": 0,
+    "root": true,
+    "rootEmpty": true,
+    "_timeout": 5000
+  },
+  "copyrightYear": 2019
+}
